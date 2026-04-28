@@ -1,0 +1,17 @@
+---
+layout: layouts/page.njk
+title: Sociedades y Empresa
+description: Sociedades comerciales, responsabilidad de administradores, conflictos societarios y gobierno corporativo.
+---
+<div class="article-list">
+  {% for post in collections.articulos %}
+    {% if post.data.category == "Sociedades y Empresa" %}
+      <article>
+        <p class="article-meta">{{ post.date | fechaES }}</p>
+        <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+        <p>{{ post.data.description }}</p>
+        <a class="read-more" href="{{ post.url }}">Leer análisis →</a>
+      </article>
+    {% endif %}
+  {% endfor %}
+</div>

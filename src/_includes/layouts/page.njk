@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+---
+<section class="page-hero">
+  <div class="container narrow">
+    <h1>{{ title }}</h1>
+    {% if description %}
+    <p class="lead">{{ description }}</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="container narrow page-body">
+  {{ content | safe }}
+</section>

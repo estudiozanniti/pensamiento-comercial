@@ -1,0 +1,17 @@
+---
+layout: layouts/page.njk
+title: Litigios Comerciales
+description: Cautelares, embargos, anotación de litis, cobro, mediación y estrategia procesal patrimonial.
+---
+<div class="article-list">
+  {% for post in collections.articulos %}
+    {% if post.data.category == "Litigios Comerciales" %}
+      <article>
+        <p class="article-meta">{{ post.date | fechaES }}</p>
+        <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+        <p>{{ post.data.description }}</p>
+        <a class="read-more" href="{{ post.url }}">Leer análisis →</a>
+      </article>
+    {% endif %}
+  {% endfor %}
+</div>

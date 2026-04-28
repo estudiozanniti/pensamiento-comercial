@@ -1,0 +1,66 @@
+---
+layout: layouts/base.njk
+title: Inicio
+description: Análisis jurídico sobre derecho comercial, contratos, concursos, empresa, fideicomisos y real estate.
+---
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">Derecho comercial argentino</p>
+      <h1>Análisis jurídico sobre empresa, contratos, insolvencia y real estate.</h1>
+      <p class="lead">
+        Pensamiento Comercial es un espacio editorial orientado al estudio práctico del derecho comercial,
+        los contratos, los concursos y quiebras, las sociedades, los fideicomisos inmobiliarios y los conflictos patrimoniales.
+      </p>
+      <div class="hero-actions">
+        <a class="button primary" href="#articulos">Leer artículos</a>
+        <a class="button secondary" href="/categorias/">Ver categorías</a>
+      </div>
+    </div>
+
+    <aside class="hero-card">
+      <strong>Temas principales</strong>
+      <ul>
+        <li>Contratos comerciales</li>
+        <li>Concursos y quiebras</li>
+        <li>Sociedades y empresa</li>
+        <li>Fideicomisos inmobiliarios</li>
+        <li>Litigios patrimoniales</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="container section">
+  <div class="section-heading">
+    <p class="eyebrow">Ejes de trabajo</p>
+    <h2>Categorías</h2>
+  </div>
+
+  <div class="category-grid">
+    <a class="category-card" href="/categorias/contratos/">Contratos</a>
+    <a class="category-card" href="/categorias/concursos-y-quiebras/">Concursos y Quiebras</a>
+    <a class="category-card" href="/categorias/sociedades-y-empresa/">Sociedades y Empresa</a>
+    <a class="category-card" href="/categorias/real-estate/">Real Estate</a>
+    <a class="category-card" href="/categorias/fideicomisos/">Fideicomisos</a>
+    <a class="category-card" href="/categorias/litigios-comerciales/">Litigios Comerciales</a>
+  </div>
+</section>
+
+<section class="container section" id="articulos">
+  <div class="section-heading">
+    <p class="eyebrow">Publicaciones</p>
+    <h2>Últimos artículos</h2>
+  </div>
+
+  <div class="article-grid">
+    {% for post in collections.articulos | reverse %}
+      <article class="article-card">
+        <p class="article-meta">{{ post.data.category }} · {{ post.date | fechaES }}</p>
+        <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+        <p>{{ post.data.description }}</p>
+        <a class="read-more" href="{{ post.url }}">Leer análisis →</a>
+      </article>
+    {% endfor %}
+  </div>
+</section>

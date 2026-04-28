@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} | Pensamiento Comercial</title>
+  <meta name="description" content="{{ description or 'Análisis jurídico sobre derecho comercial, empresa, contratos, concursos, quiebras y real estate.' }}">
+  <meta property="og:title" content="{{ title }} | Pensamiento Comercial">
+  <meta property="og:description" content="{{ description or 'Análisis jurídico sobre derecho comercial argentino.' }}">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/">
+        <span class="brand-mark">PC</span>
+        <span>
+          <strong>Pensamiento Comercial</strong>
+          <small>Derecho, empresa y patrimonio</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Abrir menú" data-menu-toggle>☰</button>
+
+      <nav class="main-nav" data-main-nav>
+        <a href="/">Inicio</a>
+        <a href="/categorias/">Categorías</a>
+        <a href="/about/">Sobre el proyecto</a>
+        <a href="/contacto/">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>Pensamiento Comercial</strong>
+        <p>Espacio editorial de análisis jurídico sobre derecho comercial argentino, empresa, contratos, concursos, fideicomisos y real estate.</p>
+      </div>
+      <div>
+        <strong>Secciones</strong>
+        <a href="/categorias/">Categorías</a>
+        <a href="/contacto/">Contacto</a>
+      </div>
+      <div>
+        <strong>Aviso</strong>
+        <p>La información publicada tiene finalidad general y no reemplaza el asesoramiento jurídico profesional.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+---
+<section class="article-hero">
+  <div class="container narrow">
+    <a class="eyebrow" href="/categorias/">← Volver a categorías</a>
+    <p class="article-meta">{{ category }} · {{ date | fechaES }}</p>
+    <h1>{{ title }}</h1>
+    <p class="lead">{{ description }}</p>
+  </div>
+</section>
+
+<section class="container narrow article-body">
+  {{ content | safe }}
+
+  <hr>
+
+  <p class="disclaimer">
+    Este artículo tiene finalidad informativa y de análisis general. No constituye asesoramiento jurídico para un caso concreto.
+  </p>
+</section>
